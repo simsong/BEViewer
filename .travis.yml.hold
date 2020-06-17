@@ -9,12 +9,6 @@ jobs:
     - PYTHON3="python3"
     compiler: gcc
     group: edge
-  - name: "Mac OS with clang"
-    env:
-    - PYTHON3="/usr/local/bin/python3"
-    compiler: clang
-    os: osx
-    osx_image: xcode10
 before_install:
 - if test ${TRAVIS_OS_NAME} = "linux"; then sudo apt-get install -y autoconf automake autopoint build-essential libtool pkg-config; fi
 - if test ${TRAVIS_OS_NAME} = "osx"; then brew update; fi
